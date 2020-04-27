@@ -1,0 +1,61 @@
+* {
+    font-family: "Bookman Old Style";
+}
+
+body {
+    background-color: #b1c7b4;
+    opacity: 80%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit-btn,
+#min-btn,
+#create-btn {
+    color: #b1c7b4;
+    background-color: green;
+    border-color: green;
+    border-radius: 4px;
+    transition: 0.2s;
+    font-family: Arial;
+    text-align: center;
+}
+
+#min-btn {
+    margin-left: -2px;
+}
+
+#create-btn {
+    display: block;
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+#exit-btn:hover,
+#min-btn:hover,
+#create-btn:hover {
+    color: white;
+    border-color: green;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.6);
+}
+
+#exit-btn:focus,
+#min-btn:focus,
+#create-btn:focus {
+    background-color: green;
+    border-color: green;
+    outline: none;
+}
