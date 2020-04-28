@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, screen} = require('electron')
+const {app, BrowserWindow, screen, nativeImage} = require('electron')
 const path = require('path')
 
 
@@ -15,19 +15,23 @@ function createWindow () {
     y: height-200,
     resizable: true,
     frame: false,
+    //icon: path.join(__dirname, 'icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
     }
   })
 
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
   mainWindow.loadFile('./index.html')
+
+  console.log(__dirname);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

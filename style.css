@@ -15,11 +15,14 @@ h1 {
 }
 
 .body-container,
-.create-container,
-.ip-container {
+.create-container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ip-container{
+    display: none;
 }
 
 #exit-btn,
@@ -60,11 +63,11 @@ h1 {
     background-color: green;
     border-color: green;
     outline: none;
-    display: none;
 }
 
 .ip-box {
-    display: none;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 2px;
+    text-align: center;
+    line-height: 25px;
 }

@@ -24,16 +24,16 @@ document.getElementById("min-btn").addEventListener("click", function () {
 });
 
 document.getElementById("create-btn").addEventListener("click", function () {
-    http.createServer(function (req, res) {
-        res.write(200, {'Content-Type': 'text/html'}); //write a response to the client
+    const server = http.createServer(function (req, res) {
+        res.write(200, {'Content-Type': 'text/html'});
         var response = 'Connected';
-        res.end(response); //end the response
-      }).listen(port); //the server object listens on port 8080
-    
+        res.end(response);
+      })
+    server.listen(port);
+
     document.getElementsByClassName('create-container')[0].style.display = "none";
-    document.getElementsByClassName('ip-container')[0].innerHTML = ip;
+    document.getElementsByClassName('ip-box')[0].innerHTML = "Serving at:</br>" + ip;
     document.getElementsByClassName('ip-container')[0].style.display = "inline-block";
-    console.log()
 
 });
 
