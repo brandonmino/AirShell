@@ -6,6 +6,7 @@
     <!-- meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js;"-->
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script>$.getJSON('https://api.ipify.org?format=jsonp&callback=?', (data) => {setIP(data.ip);});</script>
     <button id="exit-btn">x</button>
     <button id="min-btn">-</button>
   </head>
@@ -21,10 +22,5 @@
     </div>
     <!-- You can also require other files to run in this process -->
     <script src="js/renderer.js"></script>
-    <script>$.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
-      setIP(data.ip);
-      });
-      
-    </script>
   </body>
 </html>
