@@ -14,7 +14,9 @@ h1 {
     font-size: 27px;
 }
 
-.create-container {
+.body-container,
+.create-container,
+.ip-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +39,7 @@ h1 {
 }
 
 #create-btn {
-    display: block;
+    display: inline-block;
     width: 100px;
     height: 35px;
     font-size: 13px;
@@ -58,4 +60,11 @@ h1 {
     background-color: green;
     border-color: green;
     outline: none;
+    display: none;
+}
+
+.ip-box {
+    display: none;
+    font-size: 12px;
+    margin-top: 2px;
 }
