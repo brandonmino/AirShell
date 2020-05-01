@@ -15,19 +15,43 @@ h1 {
 }
 
 .body-container,
-.create-container{
+.generate-container,
+.custom-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    opacity: 1;
 }
 
-.ip-container{
-    display: none;
+.generate-container-clicked,
+.custom-container-clicked,
+.ip-container-show {
+    -webkit-transition: opacity 0.35s ease-in-out;
+    -moz-transition: opacity 0.35s ease-in-out;
+    -ms-transition: opacity 0.35s ease-in-out;
+    -o-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.generate-container-clicked,
+.custom-container-clicked {
+    opacity: 0;
+}
+
+.ip-container-show {
+    opacity: 1;
+    margin-top: -100px;
+}
+
+.ip-container {
+    opacity: 0;
 }
 
 #exit-btn,
 #min-btn,
-#create-btn {
+#generate-btn,
+#custom-btn {
     color: #b1c7b4;
     background-color: green;
     border-color: green;
@@ -41,7 +65,8 @@ h1 {
     margin-left: -2px;
 }
 
-#create-btn {
+#generate-btn,
+#custom-btn {
     display: inline-block;
     width: 100px;
     height: 35px;
@@ -51,7 +76,8 @@ h1 {
 
 #exit-btn:hover,
 #min-btn:hover,
-#create-btn:hover {
+#generate-btn:hover,
+#custom-btn:hover {
     color: white;
     border-color: green;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.6);
@@ -59,15 +85,20 @@ h1 {
 
 #exit-btn:focus,
 #min-btn:focus,
-#create-btn:focus {
+#generate-btn:focus,
+#custom-btn:focus {
     background-color: green;
     border-color: green;
     outline: none;
 }
 
-.ip-box {
+.ip-box-show {
     font-size: 15px;
-    margin-top: 2px;
     text-align: center;
     line-height: 25px;
+    opacity: 1;
+}
+
+.ip-box {
+    opacity: 0;
 }

@@ -20,7 +20,7 @@ document.getElementById("min-btn").addEventListener("click", () => {
     window.minimize(); 
 });
 
-document.getElementById("create-btn").addEventListener("click", () => {
+document.getElementById("generate-btn").addEventListener("click", () => {
     server = http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         let response = 'Connected';
@@ -28,9 +28,19 @@ document.getElementById("create-btn").addEventListener("click", () => {
       })
     server.listen(port);
 
-    document.getElementsByClassName('create-container')[0].style.display = "none";
-    document.getElementsByClassName('ip-box')[0].innerHTML = "Serving at:</br>" + ip;
-    document.getElementsByClassName('ip-container')[0].style.display = "inline-block";
+    document.getElementsByClassName('generate-container')[0].className = 'generate-container-clicked';
+    document.getElementsByClassName('custom-container')[0].className = 'custom-container-clicked';
+    setTimeout(() => {
+        document.getElementsByClassName('ip-box')[0].className = "ip-box-show";
+        document.getElementsByClassName('ip-box-show')[0].innerHTML = "Serving at:</br>" + ip + ":" + port;
+        document.getElementsByClassName('ip-container')[0].className = "ip-container-show";
+    }, 2000);
+    
+});
+
+document.getElementById("custom-btn").addEventListener("click", () => {
+    document.getElementsByClassName('generate-container')[0].className = 'generate-container-clicked';
+    document.getElementsByClassName('custom-container')[0].className = 'custom-container-clicked';
 });
 
 
