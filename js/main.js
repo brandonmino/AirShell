@@ -1,4 +1,4 @@
-const {app, BrowserWindow, screen, nativeImage} = require('electron');
+const {app, BrowserWindow, screen} = require('electron');
 const path = require('path');
 
 let createWindow = () => {
@@ -14,7 +14,6 @@ let createWindow = () => {
     y: borderHeight-200,
     resizable: true,
     frame: false,
-    //icon: path.join(__dirname, 'icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
