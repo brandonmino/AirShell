@@ -2,13 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js;"-->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script>$.getJSON('https://api.ipify.org?format=jsonp&callback=?', (data) => {setIP(data.ip);});</script>
-    <button id="exit-btn">x</button>
-    <button id="min-btn">-</button>
+    <div class="header-btns">
+      <button id="exit-btn">x</button>
+      <button id="min-btn">-</button>
+    </div>
   </head>
   <body>
     <h1>AirShell</h1>
@@ -16,14 +15,11 @@
       <div class="generate-container">
         <button id="generate-btn">Generate Server</button>
       </div>
-      <div class="custom-container">
-        <button id="custom-btn">Custom Server</button>
-      </div>
       <div class="ip-container">
-        <p class="ip-box"></p>
+        <p class="ip-header"></p>
+        <p class="ip-info"></p>
       </div>
     </div>
-    <!-- You can also require other files to run in this process -->
     <script src="js/renderer.js"></script>
   </body>
 </html>
